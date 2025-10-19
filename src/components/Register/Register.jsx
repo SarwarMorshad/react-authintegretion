@@ -1,18 +1,37 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import React from "react";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useContext } from "react";
 import { Link } from "react-router";
-import auth from "../../firebase/firebase.init";
+// import auth from "../../firebase/firebase.init";
+import AuthContext from "../../contexts/AuthContext";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
+  //   const handleRegister = (event) => {
+  //     event.preventDefault();
+  //     const email = event.target.email.value;
+  //     const password = event.target.password.value;
+  //     console.log(email, password);
+
+  //     createUserWithEmailAndPassword(auth, email, password)
+  //       .then((userCredential) => {
+  //         // Signed in
+  //         const user = userCredential.user;
+  //         console.log("User registered:", user);
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  //   };
+
   const handleRegister = (event) => {
     event.preventDefault();
+    // const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(email, password);
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUser(email, password)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
         console.log("User registered:", user);
       })
@@ -20,6 +39,7 @@ const Register = () => {
         console.log(error);
       });
   };
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
