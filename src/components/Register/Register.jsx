@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router";
 // import auth from "../../firebase/firebase.init";
-import AuthContext from "../../contexts/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
