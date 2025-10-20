@@ -14,6 +14,7 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("User logged in:", user);
+        event.target.reset();
       })
       .catch((error) => {
         console.log(error);
