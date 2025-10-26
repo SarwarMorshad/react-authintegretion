@@ -4,6 +4,8 @@ const Profile = () => {
   return (
     <div>
       <p>Here you can view and edit your profile information.</p>
+      <button>Edit Profile</button>
+      <button>Delete Account</button>
     </div>
   );
 };
