@@ -8,6 +8,7 @@ const Profile = () => {
       <button>Delete Account</button>
       <button>View Activity Log</button>
       <button>Change Password</button>
+      <button>Logout</button>
     </div>
   );
 };
