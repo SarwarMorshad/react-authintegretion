@@ -9,6 +9,7 @@ const Profile = () => {
       <button>View Activity Log</button>
       <button>Change Password</button>
       <button>Logout</button>
+      <button>Delete Account</button>
     </div>
   );
 };
